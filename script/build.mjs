@@ -4,13 +4,11 @@ import chokidar from "chokidar";
 import { execSync } from "child_process";
 import esbuild from "esbuild";
 import alias from 'esbuild-plugin-alias';
+import * as fs from "fs";
 
 const date = new Date().toString();
 const isProd = process.env.NODE_ENV === "production";
 
-const synchPublic = async () => {
-  execSync("cp public/* dist/");
-};
 import { createRequire } from 'module';
 const _require = createRequire(import.meta.url);
 
@@ -19,9 +17,9 @@ const watchOptn = {
   ignoreInitial: true,
 };
 async function build() {
-  execSync("rm -rf dist/");
-  execSync("mkdir dist");
-  await synchPublic();
+  fs.rmSync("dist", { recursive: true, force: true });
+  fs.mkdirSync("dist");
+  fs.cpSync("public", "dist", { recursive: true });
   console.time("build");
   const result = await esbuild.build({
     entryPoints: ["src/index.tsx"],
@@ -53,7 +51,7 @@ async function build() {
   console.log(text);
 
   if (isProd) {
-    execSync("rm -f chrome-palette.zip");
+    fs.rmSync("chrome-palette.zip", { force: true });
     execSync("zip -r chrome-palette.zip dist/");
   } else {
     const wss = new WebSocketServer({ port: 8081 });
