@@ -21,8 +21,8 @@ export default function SampleAtomCommand({
   const __html = (highlight ? highlight : name).replace(/\n/g, "<br />");
   return (
     <div className="atom-item">
-      <span className={`atom-category ${category}`}>{category}</span>
       {icon && <img className={"atom-icon"} src={icon} alt=""></img>}
+      <span className={`atom-category ${category}`}>{category}</span>
       {
         <span
           dangerouslySetInnerHTML={{

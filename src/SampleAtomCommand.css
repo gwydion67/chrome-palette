@@ -69,6 +69,7 @@
   overflow: scroll !important;
 }
 .atom-suggestion {
+  color: #d1d5db !important;
   font-weight: 300;
   background-color: #353535 !important;
   border: none !important;
@@ -76,6 +77,9 @@
 }
 .atom-suggestion[aria-selected="true"] {
   background-color: #202124 !important;
+}
+.atom-icon {
+  margin-right: 0.5rem;
 }
 .atom-item {
   word-break: break-all;

@@ -379,6 +379,7 @@ function useCommandSuggestions({
             }`,
           });
         },
+        icon: "assets/ic-telegram.svg",
       },
       {
         name: "Share on WhatsApp",
@@ -395,6 +396,7 @@ function useCommandSuggestions({
             }`,
           });
         },
+        icon: "assets/ic-whatsapp.svg",
       },
       {
         name: "Copy URL",
@@ -408,8 +410,9 @@ function useCommandSuggestions({
           if (currentTab.url) {
             await navigator.clipboard.writeText(currentTab.url);
           }
-          window.close()
+          window.close();
         },
+        icon: "assets/ic-copy.svg",
       },
     ];
     if (process.env.NODE_ENV !== "production") {
