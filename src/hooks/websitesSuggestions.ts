@@ -56,7 +56,7 @@ const templates: Template[] = [
   },
   {
     name: "Gmail",
-    url: (query) => `https://mail.google.com/mail/u/0/#search/${query}`,
+    url: (query) => `https://mail.google.com/mail/u/0/#search/provadis${query}`,
     keyword: "gm",
   },
 

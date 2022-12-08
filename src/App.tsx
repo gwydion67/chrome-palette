@@ -18,6 +18,7 @@ import { useBookmarkThisSuggestions } from "./hooks/bookmarkThisSuggestions";
 import { sortByUsed, storeLastUsed } from "./last-used";
 import usePaletteInput from "./hooks/usePaletteInput";
 import { parseInputCommand } from "./hooks/parseInputCommand";
+import { useCreateSuggestions } from "./hooks/createNewSuggestions";
 
 function App() {
   const [, forceRender] = useState({});
@@ -31,6 +32,7 @@ function App() {
     ...useHistorySuggestions("h", input),
     ...useBookmarkSuggestions("b", input),
     ...useBookmarkThisSuggestions("bt", input),
+    ...useCreateSuggestions("new", input),
     ...useTemplatedSuggestions(input),
   ]);
 
@@ -42,7 +44,7 @@ function App() {
     commands = lastCommands.current;
   } else {
     lastCommands.current = commands;
-    console.log("Commands will rerender and create double search")
+    console.log("Commands will rerender and create double search");
   }
 
   return (
