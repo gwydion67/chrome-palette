@@ -44,7 +44,7 @@ body .atom-suggestionsContainerOpen {
 }
 
 .atom-category.Command {
-  background: rgb(67, 130, 207);
+  background: rgb(159, 74,84  );
 }
 .atom-category.History {
   background: rgb(165, 22, 134);
@@ -56,10 +56,13 @@ body .atom-suggestionsContainerOpen {
   background: rgb(46, 41, 194);
 }
 .atom-category.Search {
-  background: rgb(49, 177, 79);
+  background: rgb(40, 90, 143);
 }
 .atom-category.Drawer {
   background: rgb(206, 64, 206);
+}
+.atom-category.New {
+  background: rgb(60, 144, 102);
 }
 .atom-suggestionsContainerOpen {
   overflow: scroll !important;
