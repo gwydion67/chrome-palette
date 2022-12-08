@@ -18,6 +18,10 @@ const templates: Template[] = [
     name: "New Calendar Event",
     url: (query) => `https://meeting.new`,
   },
+  {
+    name: "New GitHub Repository",
+    url: (query) => `https://repo.new`,
+  },
 ];
 
 export function useCreateSuggestions(
