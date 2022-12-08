@@ -68,9 +68,9 @@ export function useBookmarkThisSuggestions(
         name: "Bookmark this tab",
         category: "Add Bookmark",
         command: async function () {
-          setInputValue(KEYWORD + ">");
+          setInputValue(KEYWORD + " ");
         },
-        keyword: KEYWORD + ">",
+        keyword: KEYWORD,
       },
     ],
     []

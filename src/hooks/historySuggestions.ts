@@ -54,9 +54,9 @@ export function useHistorySuggestions(
         name: "Search History",
         category: "Search",
         command: async function () {
-          setInputValue(KEYWORD + ">");
+          setInputValue(KEYWORD + " ");
         },
-        keyword: KEYWORD + ">",
+        keyword: KEYWORD,
         shortcut,
       },
     ],

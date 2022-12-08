@@ -43,9 +43,9 @@ export function useSwitchTabSuggestions(
         name: "Search Tabs",
         category: "Search",
         command: async function () {
-          setInputValue(KEYWORD + ">");
+          setInputValue(KEYWORD + " ");
         },
-        keyword: KEYWORD + ">",
+        keyword: KEYWORD,
         shortcut,
       },
     ],

@@ -57,9 +57,9 @@ export function useBookmarkSuggestions(
         name: "Bookmarked Tabs",
         category: "Search",
         command: async function () {
-          setInputValue(KEYWORD + ">");
+          setInputValue(KEYWORD + " ");
         },
-        keyword: KEYWORD + ">",
+        keyword: KEYWORD,
       },
     ],
     []

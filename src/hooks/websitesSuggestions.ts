@@ -50,9 +50,9 @@ export function useTemplatedSuggestions({
           name: `Search ${template.name}`,
           category: "Search",
           command: async function () {
-            setInputValue(template.keyword + ">");
+            setInputValue(template.keyword + " ");
           },
-          keyword: template.keyword + ">",
+          keyword: template.keyword,
           shortcut,
         };
       }),
