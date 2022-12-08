@@ -39,6 +39,27 @@ const templates: Template[] = [
     url: (query) => `https://www.google.com/search?btnI=1&q=${query}`,
     keyword: "gl",
   },
+  {
+    name: "Google Maps",
+    url: (query) => `http://maps.google.com/?q=${query}`,
+    keyword: "m",
+  },
+  {
+    name: "Contacts",
+    url: (query) => `https://contacts.google.com/search/${query}`,
+    keyword: "c",
+  },
+  {
+    name: "Photos",
+    url: (query) => `https://photos.google.com/search/${query}`,
+    keyword: "ph",
+  },
+  {
+    name: "Gmail",
+    url: (query) => `https://mail.google.com/mail/u/0/#search/${query}`,
+    keyword: "gm",
+  },
+
 ];
 
 export function useTemplatedSuggestions({
