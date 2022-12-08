@@ -2,7 +2,7 @@ import "./SampleAtomCommand.css";
 
 type Props = {
   name: string;
-  highlight: string;
+  highlight: string[] | string;
   shortcut?: string;
   keyword?: string;
   category: string;
@@ -18,7 +18,12 @@ export default function SampleAtomCommand({
   category,
   icon,
 }: Props) {
-  const __html = (highlight ? highlight : name).replace(/\n/g, "<br />");
+  console.log("NAME", name)
+  console.log("HIGHLIGHT", highlight)
+  console.log("KEYWORD", keyword)
+  console.log("CATEGORY", category)
+  let __html = (highlight && highlight[0] ? highlight[0] : name);
+  __html = __html.toString().replace(/\n/g, "<br />");
   return (
     <div className="atom-item">
       {icon && <img className={"atom-icon"} src={icon} alt=""></img>}

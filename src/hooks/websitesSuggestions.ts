@@ -107,7 +107,7 @@ export function useTemplatedSuggestions({
           setInputValue,
         });
         return {
-          name: `Search ${template.name}`,
+          name: `${template.name}`,
           category: "Search",
           command: async function () {
             setInputValue(template.keyword + " ");
