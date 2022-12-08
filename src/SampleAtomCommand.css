@@ -1,5 +1,6 @@
 body .atom-suggestionsContainerOpen {
   max-height: 330px;
+  border: none !important;
 }
 .atom-category {
   color: #fff;
@@ -7,6 +8,7 @@ body .atom-suggestionsContainerOpen {
   border-radius: 2px;
   padding: 0 3px;
   float: left;
+  border-radius: 0.25rem;
 }
 .atom-timeAgo,
 .atom-keyword,
@@ -19,7 +21,7 @@ body .atom-suggestionsContainerOpen {
   font-family: inherit;
   font-size: 1em;
   letter-spacing: 0.1em;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   float: right;
 }
 .atom-shortcut {
@@ -44,7 +46,7 @@ body .atom-suggestionsContainerOpen {
 }
 
 .atom-category.Command {
-  background: rgb(159, 74,84  );
+  background: rgb(159, 74, 84);
 }
 .atom-category.History {
   background: rgb(165, 22, 134);
@@ -69,6 +71,12 @@ body .atom-suggestionsContainerOpen {
 }
 .atom-suggestion {
   font-weight: 300;
+  background-color: #353535 !important;
+  border: none !important;
+  border-radius: 0.5rem;
+}
+.atom-suggestion[aria-selected="true"] {
+  background-color: #202124 !important;
 }
 .atom-item {
   word-break: break-all;
