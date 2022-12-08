@@ -34,6 +34,11 @@ const templates: Template[] = [
     url: (query) => `https://en.wikipedia.org/w/index.php?search=${query}`,
     keyword: "w",
   },
+  {
+    name: "Google Lucky Search",
+    url: (query) => `https://www.google.com/search?btnI=1&q=${query}`,
+    keyword: "gl",
+  },
 ];
 
 export function useTemplatedSuggestions({
