@@ -65,14 +65,13 @@ function App() {
       }}
       options={{
         threshold: -10000, //-Infinity, // Don't return matches worse than this (higher is faster)
-        limit: 100, // Don't return more results than this (lower is faster)
-        allowTypo: false, //true, // Allwos a snigle transpoes (false is faster)
+        limit: 25, // Don't return more results than this (lower is faster)
+        allowTypo: true, //true, // Allwos a snigle transpoes (false is faster)
         key: "name", // For when targets are objects (see its example usage)
         keys: ["name"], // For when targets are objects (see its example usage)
         scoreFn: null, // For use with `keys` (see its example usage)
       }}
-      header={<Header />}
-      maxDisplayed={100}
+      maxDisplayed={25}
       onRequestClose={() => {
         window.close();
       }}
