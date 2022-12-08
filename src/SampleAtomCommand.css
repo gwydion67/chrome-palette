@@ -66,6 +66,9 @@ body .atom-suggestionsContainerOpen {
 .atom-category.New {
   background: rgb(60, 144, 102);
 }
+.atom-category.Share {
+  background: #CF264D;
+}
 .atom-suggestionsContainerOpen {
   overflow: scroll !important;
 }
