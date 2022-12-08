@@ -61,8 +61,23 @@ const templates: Template[] = [
   },
   {
     name: "Gmail",
-    url: (query) => `https://mail.google.com/mail/u/0/#search/provadis${query}`,
+    url: (query) => `https://mail.google.com/mail/u/0/#search/${query}`,
     keyword: "gm",
+  },
+  {
+    name: "Google Scholar",
+    url: (query) => `https://scholar.google.com/scholar?q=${query}`,
+    keyword: "gs",
+  },
+  {
+    name: "Google Keep",
+    url: (query) => `https://keep.google.com/u/0/#search/text%253D${query}`,
+    keyword: "gk",
+  },
+  {
+    name: "Amazon",
+    url: (query) => `https://www.amazon.de/s?k=${query}`,
+    keyword: "amz",
   },
 
 ];
