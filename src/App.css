@@ -1,8 +1,7 @@
 body {
   width: 605px;
-  height: 395px;
   background: #353535;
-  padding: 10px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
 .App {
   text-align: center;
@@ -32,6 +31,32 @@ body {
 
 .App-link {
   color: #61dafb;
+}
+
+.atom-input {
+  width: calc(100% - 2rem) !important;
+  border-radius: 3rem !important;
+  background-color: #202124 !important;
+  -webkit-tap-highlight-color: transparent;
+  border: none !important;
+  padding: 0.5rem 1rem !important;
+  box-shadow: 0 0 0.5rem 0.3rem #353535;
+  z-index: 10;
+  position: relative;
+  transition: background-color 200ms ease-in-out !important;
+}
+
+.atom-inputFocused, .atom-input:active, .atom-input:hover {
+  /*background-color: #292a2d !important;*/
+}
+
+body .atom-suggestionsContainerOpen {
+  max-height: 350px;
+  border: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 @keyframes App-logo-spin {
