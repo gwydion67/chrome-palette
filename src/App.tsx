@@ -66,7 +66,7 @@ function App() {
         return commandPalette.current.commandPaletteInput.input.value;
       }}
       options={{
-        threshold: -10000, //-Infinity, // Don't return matches worse than this (higher is faster)
+        threshold: -1000000, //-Infinity, // Don't return matches worse than this (higher is faster)
         limit: 25, // Don't return more results than this (lower is faster)
         allowTypo: true, //true, // Allwos a snigle transpoes (false is faster)
         key: "name", // For when targets are objects (see its example usage)
@@ -83,7 +83,7 @@ function App() {
       onHighlight={(command?: Command) => {
         command?.onHighlighted?.();
       }}
-      placeholder="Search for a command"
+      placeholder="Search commands"
       renderCommand={SampleAtomCommand}
       showSpinnerOnSelect={false}
       showAllCommandsWhenNoneMatches={false}
