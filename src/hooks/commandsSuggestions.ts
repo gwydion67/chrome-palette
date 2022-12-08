@@ -396,6 +396,21 @@ function useCommandSuggestions({
           });
         },
       },
+      {
+        name: "Copy URL",
+        category: "Share",
+        command: async function () {
+          const windowId = browser.windows.WINDOW_ID_CURRENT;
+          const [currentTab] = await browser.tabs.query({
+            active: true,
+            windowId,
+          });
+          if (currentTab.url) {
+            await navigator.clipboard.writeText(currentTab.url);
+          }
+          window.close()
+        },
+      },
     ];
     if (process.env.NODE_ENV !== "production") {
       commands.push({
