@@ -327,7 +327,7 @@ function useCommandSuggestions({
             windowTypes: ["normal"],
           });
           const otherWindows = allWindows.filter(
-            (win) => win.id !== currentWindow.id
+            (win) => win.id !== currentWindow.id,
           );
           const prevWindow = otherWindows[0];
           await browser.windows.update(prevWindow.id!, { focused: true });
@@ -344,8 +344,9 @@ function useCommandSuggestions({
         shortcut: "⌃⌘ f",
         command: async function () {
           const currWindow = await browser.windows.getCurrent();
-          const state =
-            currWindow.state === "fullscreen" ? "normal" : "fullscreen";
+          const state = currWindow.state === "fullscreen"
+            ? "normal"
+            : "fullscreen";
           browser.windows.update(currWindow.id!, {
             state,
           });
@@ -361,6 +362,38 @@ function useCommandSuggestions({
             resetHistory();
             window.location.reload();
           }, 0);
+        },
+      },
+      {
+        name: "Share on Telegram",
+        category: "Share",
+        command: async function () {
+          const windowId = browser.windows.WINDOW_ID_CURRENT;
+          const [currentTab] = await browser.tabs.query({
+            active: true,
+            windowId,
+          });
+          await browser.tabs.create({
+            url: `https://t.me/share/url?url=${
+              encodeURIComponent(currentTab.url || "")
+            }`,
+          });
+        },
+      },
+      {
+        name: "Share on WhatsApp",
+        category: "Share",
+        command: async function () {
+          const windowId = browser.windows.WINDOW_ID_CURRENT;
+          const [currentTab] = await browser.tabs.query({
+            active: true,
+            windowId,
+          });
+          await browser.tabs.create({
+            url: `https://wa.me/?text=${
+              encodeURIComponent(currentTab.url || "")
+            }`,
+          });
         },
       },
     ];
