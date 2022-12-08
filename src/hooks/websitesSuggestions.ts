@@ -30,9 +30,14 @@ const templates: Template[] = [
     keyword: "g",
   },
   {
-    name: "Wikipedia",
-    url: (query) => `https://en.wikipedia.org/w/index.php?search=${query}`,
+    name: "German Wikipedia",
+    url: (query) => `https://de.wikipedia.org/w/index.php?search=${query}`,
     keyword: "w",
+  },
+  {
+    name: "English Wikipedia",
+    url: (query) => `https://en.wikipedia.org/w/index.php?search=${query}`,
+    keyword: "we",
   },
   {
     name: "Google Lucky Search",
