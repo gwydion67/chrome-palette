@@ -21,20 +21,24 @@ export default function SampleAtomCommand({
   const __html = (highlight ? highlight : name).replace(/\n/g, "<br />");
   return (
     <div className="atom-item">
-      {icon && <img className={"atom-icon"} src={icon} alt=""></img>}
-      <span className={`atom-category ${category}`}>{category}</span>
-      {
-        <span
-          dangerouslySetInnerHTML={{
-            __html,
-          }}
-        />
-      }
-      <span className="atom-shortcut">
-        {shortcut === "unset" ? "" : shortcut}
-      </span>
-      <span className="atom-keyword">{keyword}</span>
-      <span className="atom-timeAgo">{timeAgo}</span>
+      <div>
+        {icon && <img className={"atom-icon"} src={icon} alt=""></img>}
+        <span className={`atom-category ${category}`}>{category}</span>
+        {
+          <span
+            dangerouslySetInnerHTML={{
+              __html,
+            }}
+          />
+        }
+      </div>
+      <div>
+        {shortcut && shortcut !== "unset" && (
+          <span className="atom-shortcut">{shortcut}</span>
+        )}
+        {keyword && <span className="atom-keyword">{keyword}</span>}
+        {timeAgo && <span className="atom-timeAgo">{timeAgo}</span>}
+      </div>
     </div>
   );
 }

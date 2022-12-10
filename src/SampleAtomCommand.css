@@ -1,24 +1,40 @@
+.atom-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.atom-item > div {
+  display: flex;
+  align-items: center;
+}
+
 .atom-category {
+  display: flex;
+  align-items: center;
   color: #fff;
   margin-right: 6px;
   border-radius: 2px;
-  padding: 0 3px;
+  padding: 0 0.5rem;
   float: left;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
+  height: 1.25rem;
+  flex-shrink: 0;
 }
 .atom-timeAgo,
 .atom-keyword,
 .atom-shortcut {
-  margin-right: 2px;
-  margin-left: 0.45454545em;
-  padding: 0 0.375em;
-  line-height: 2;
-  margin-top: -0.375em;
-  font-family: inherit;
-  font-size: 1em;
+  display: flex;
+  align-items: center;
+  height: 1.25rem;
+  padding: 0 0.5em;
+  margin-left: auto;
+  font-family: monospace;
   letter-spacing: 0.1em;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   float: right;
+  flex-shrink: 0;
 }
 .atom-shortcut {
   color: #fff;
@@ -63,7 +79,7 @@
   background: rgb(60, 144, 102);
 }
 .atom-category.Share {
-  background: #CF264D;
+  background: #cf264d;
 }
 .atom-suggestionsContainerOpen {
   overflow: scroll !important;

@@ -125,8 +125,8 @@ export function useTemplatedSuggestions({
       if (keyword.toLowerCase() === template.keyword.toLowerCase()) {
         return [
           {
-            name: `Search ${template.name}: ${query}`,
-            category: "Search",
+            name: `${query}`,
+            category: `Search ${template.name}`,
             command: async function () {
               await browser.tabs.create({
                 url: template.url(query),

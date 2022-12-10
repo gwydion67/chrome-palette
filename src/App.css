@@ -1,5 +1,5 @@
 body {
-  width: 605px;
+  width: 600px;
   background: #353535;
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
@@ -51,12 +51,12 @@ body {
 }
 
 body .atom-suggestionsContainerOpen {
-  max-height: 341px;
   border: none !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  max-height: unset !important;
 }
 
 @keyframes App-logo-spin {
