@@ -51,7 +51,7 @@ body {
 }
 
 body .atom-suggestionsContainerOpen {
-  max-height: unset;
+  max-height: 341px;
   border: none !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;

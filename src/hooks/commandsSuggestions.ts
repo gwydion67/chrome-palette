@@ -365,7 +365,7 @@ function useCommandSuggestions({
         },
       },
       {
-        name: "Telegram",
+        name: "Share on Telegram",
         category: "Share",
         command: async function () {
           const windowId = browser.windows.WINDOW_ID_CURRENT;
@@ -382,7 +382,7 @@ function useCommandSuggestions({
         icon: "assets/ic-telegram.svg",
       },
       {
-        name: "WhatsApp",
+        name: "Share on WhatsApp",
         category: "Share",
         command: async function () {
           const windowId = browser.windows.WINDOW_ID_CURRENT;
