@@ -93,6 +93,24 @@ const templates: Template[] = [
     keyword: "amz",
     icon: "chrome://favicon/https://amazon.de",
   },
+  {
+    name: "Genius",
+    url: (query) => `https://genius.com/search?q=${query}`,
+    keyword: "gen",
+    icon: "chrome://favicon/https://genius.com",
+  },
+  {
+    name: "GitHub Repositories",
+    url: (query) => `https://github.com/search?q=repo:${query}}`,
+    keyword: "re",
+    icon: "chrome://favicon/https://github.com",
+  },
+  {
+    name: "GitHub",
+    url: (query) => `https://genius.com/search?q=${query}`,
+    keyword: "gh",
+    icon: "chrome://favicon/https://genius.com",
+  },
 
 ];
 
