@@ -18,10 +18,11 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.1",
     "webextension-polyfill": "^0.8.0",
-    "ws": "^8.2.2"
+    "ws": "^8.2.2",
+    "preact-render-to-string": "^6.2.1"
   },
   "scripts": {
-    "start": "node script/build.mjs",
+    "start": "NODE_ENV=development node script/build.mjs",
     "check-types": "tsc --noEmit",
     "build": "NODE_ENV=production node script/build.mjs",
     "upgrade": "npx npm-check -u"
