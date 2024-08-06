@@ -5,9 +5,15 @@ import { execSync } from "child_process";
 import esbuild from "esbuild";
 import alias from 'esbuild-plugin-alias';
 import * as fs from "fs";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const date = new Date().toString();
 const isProd = process.env.NODE_ENV === "production";
+
+const synchPublic = async () => {
+  fs.cpSync("public", "dist", { recursive: true });
+};
 
 import { createRequire } from 'module';
 const _require = createRequire(import.meta.url);
