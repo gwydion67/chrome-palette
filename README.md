@@ -4,9 +4,7 @@ A SublimeText/Atom/Vscode style command palette for chrome!
 
 ## Installation
 
-[Chrome Web Store](https://chrome.google.com/webstore/detail/chrome-palette/hjkpneggcnclhpkddehdhlkeljclcnbo)
-
-Or you can unzip [chrome-palette.zip](https://github.com/dbuezas/chrome-palette/raw/master/chrome-palette.zip) and load it unpacked from [chrome://extensions](chrome://extensions)
+ you can unzip [chrome-palette.zip](https://github.com/gwydion67/chrome-palette/raw/master/chrome-palette.zip) and load it unpacked from [chrome://extensions](chrome://extensions)
 
 ![alt text](./screenshots/marquee.jpg)
 
